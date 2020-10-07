@@ -4,6 +4,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.sefaz.exception.ErrorGeneralException;
+import lombok.extern.log4j.Log4j2;
+
+@Log4j
 public class PersistenceServiceFactory {
 
 	private static EntityManagerFactory emf = null;
@@ -19,7 +23,7 @@ public class PersistenceServiceFactory {
             System.out.println("Manager = "+em);  
               
         }catch(Exception e){  
-            System.out.println("Não conseguiu acesar o Banco ");  
+            new ErrorGeneralException(e.getMessage(), e.getCause());
         }  
         return em;    
     } 

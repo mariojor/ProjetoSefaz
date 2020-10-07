@@ -1,4 +1,4 @@
-package br.com.sefaz.domain;
+package br.com.sefaz.entity;
 
 import java.io.Serializable;
 import java.util.HashSet;
