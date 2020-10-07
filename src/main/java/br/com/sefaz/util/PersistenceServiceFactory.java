@@ -7,7 +7,6 @@ import javax.persistence.Persistence;
 import br.com.sefaz.exception.ErrorGeneralException;
 import lombok.extern.log4j.Log4j2;
 
-@Log4j
 public class PersistenceServiceFactory {
 
 	private static EntityManagerFactory emf = null;
