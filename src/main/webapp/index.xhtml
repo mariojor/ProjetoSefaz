@@ -4,27 +4,16 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
 <h:head>
+	TESTE
 </h:head>
 <h:body>
-	<f:metadata>
-		<o:viewParam name="cliente" value="#{cadastroClienteBean.cliente}" />
-	</f:metadata>
-	<h1>Cadastro</h1>
+	<h1>dsfsefse</h1>
 	<h:form id="frmCadastro">
 		<p:panelGrid columns="2" id="painel"
 			style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo">
-			<p:outputLabel value="Nome" for="nome" />
-			<p:inputText id="nome" value="#{cadastroUsuarioBean.usuario.nome}" />
+			<p:outputLabel value="#{cadastro.teste}" for="nome" />
+			<p:inputText id="nome" value="#{cadastro.teste}" />
 
-			<p:outputLabel value="Email" for="email" />
-			<p:inputText id="email" value="#{cadastroUsuarioBean.usuario.email}" />
-
-			<p:outputLabel value="Senha" for="senha" />
-			<p:inputText id="senha" value="#{cadastroUsuarioBean.usuario.senha}" />
-
-
-			<p:commandButton value="Salvar" id="botaoSalvar"
-				action="#{cadastroUsuarioBean.salvar}" update="@form" />
 		</p:panelGrid>
 	</h:form>
 
