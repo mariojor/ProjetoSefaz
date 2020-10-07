@@ -1,4 +1,4 @@
-package br.com.sefaz.entity;
+package br.com.sefaz.model;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -17,6 +17,8 @@ import lombok.Data;
 @Entity
 @Data
 public class Usuario implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

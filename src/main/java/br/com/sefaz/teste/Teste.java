@@ -2,8 +2,8 @@ package br.com.sefaz.teste;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.sefaz.dao.UsuarioDAO;
-import br.com.sefaz.entity.Usuario;
+import br.com.sefaz.model.Usuario;
+import br.com.sefaz.repository.UsuarioDAO;
 
 public class Teste {
 

@@ -1,10 +1,10 @@
-package br.com.sefaz.dao;
+package br.com.sefaz.repository;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.com.sefaz.entity.Usuario;
+import br.com.sefaz.model.Usuario;
 import br.com.sefaz.util.PersistenceServiceFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j2;
 
 public class UsuarioDAO {
 
-	public Usuario salvar(Usuario usuario) throws Exception {
+	public Usuario salvar(Usuario usuario) {
 		EntityManager entityManager = PersistenceServiceFactory.create();
 		try {
 			entityManager.getTransaction().begin();
