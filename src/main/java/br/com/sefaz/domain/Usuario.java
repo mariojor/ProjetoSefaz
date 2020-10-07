@@ -1,5 +1,6 @@
 package br.com.sefaz.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,21 +16,21 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Usuario {
+public class Usuario implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	private String nome;
-	
+
 	@Column(unique = true)
 	private String email;
-	
+
 	private String senha;
-	
+
 	@ElementCollection
 	@CollectionTable(name = "TELEFONE")
 	private Set<String> telefones = new HashSet();
-	
+
 }
