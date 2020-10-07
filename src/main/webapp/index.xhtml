@@ -4,18 +4,39 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
 <h:head>
-	TESTE
+Sistema Sefaz
 </h:head>
 <h:body>
-	<h1>dsfsefse</h1>
+	<f:metadata>
+		<o:viewParam name="cliente" value="#{cadastro.usuario}" />
+	</f:metadata>
+	<h1>Cadastro de Usuario</h1>
 	<h:form id="frmCadastro">
 		<p:panelGrid columns="2" id="painel"
 			style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo">
-			<p:outputLabel value="#{cadastro.teste}" for="nome" />
-			<p:inputText id="nome" value="#{cadastro.teste}" />
+			<p:outputLabel value="Nome" for="nome" />
+			<p:inputText id="nome" value="#{cadastro.usuario.nome}" />
 
+			<p:outputLabel value="Email" for="email" />
+			<p:inputText id="email" value="#{cadastro.usuario.email}" />
+
+			<p:outputLabel value="Senha" for="senha" />
+			<p:inputText id="senha" value="#{cadastro.usuario.senha}" />
+
+
+			<p:commandButton value="Salvar" id="botaoSalvar"
+				action="#{cadastro.salvar}" update="@form" />
+			<p:commandButton value="listarTodos" id="botaoListarTodos"
+				action="#{cadastro.listarTodos}" update="@form" />
 		</p:panelGrid>
 	</h:form>
-
+	<p:dataTable var="usu" value="#{cadastro.listaUsuarios}">
+		<p:column headerText="Nome">
+			<h:outputText value="#{usu.nome}" />
+		</p:column>
+		<p:column headerText="Email">
+			<h:outputText value="#{usu.email}" />
+		</p:column>
+	</p:dataTable>
 </h:body>
 </html>
