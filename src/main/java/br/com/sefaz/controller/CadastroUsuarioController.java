@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.sefaz.model.Usuario;
-import br.com.sefaz.model.UsuarioModel;
 import br.com.sefaz.service.UsuarioSevice;
 
 @Named
@@ -21,10 +20,10 @@ public class CadastroUsuarioController implements Serializable {
 	private UsuarioSevice usuarioSevice;
 
 	@Inject
-	UsuarioModel model;
+	Usuario usuario;
 	
-	public void salvar(UsuarioModel usuarioModel) {
-		this.usuarioSevice.salvar(U);
+	public void salvar() {
+		this.usuarioSevice.salvar(this.usuario);
 	}
 
 	public List<Usuario> listarTodos() {
