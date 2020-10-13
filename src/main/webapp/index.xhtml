@@ -7,36 +7,25 @@
 Sistema Sefaz
 </h:head>
 <h:body>
-	<f:metadata>
-		<o:viewParam name="cliente" value="#{cadastro.usuario}" />
-	</f:metadata>
-	<h1>Cadastro de Usuario</h1>
-	<h:form id="frmCadastro">
-		<p:panelGrid columns="2" id="painel"
-			style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo">
-			<p:outputLabel value="Nome" for="nome" />
-			<p:inputText id="nome" value="#{cadastro.usuario.nome}" />
+	<h1>cadastroUsuarioBean de Usuario</h1>
+	<h:form id="frmcadastroUsuarioBean">
+		<h:panelGrid columns="2" id="painel"
+			style="width: 100%; margin-toh: 20px" columnClasses="rotulo, campo">
+			<h:outputLabel value="Nome" for="nome" />
+			<h:inputText id="nome" value="#{cadastroUsuarioBean.usuario.nome}" />
 
-			<p:outputLabel value="Email" for="email" />
-			<p:inputText id="email" value="#{cadastro.usuario.email}" />
+			<h:outputLabel value="Email" for="email" />
+			<h:inputText id="email" value="#{cadastroUsuarioBean.usuario.email}" />
 
-			<p:outputLabel value="Senha" for="senha" />
-			<p:inputText id="senha" value="#{cadastro.usuario.senha}" />
+			<h:outputLabel value="Senha" for="senha" />
+			<h:inputText id="senha" value="#{cadastroUsuarioBean.usuario.senha}" />
 
 
-			<p:commandButton value="Salvar" id="botaoSalvar"
-				action="#{cadastro.salvar}" update="@form" />
-			<p:commandButton value="listarTodos" id="botaoListarTodos"
-				action="#{cadastro.listarTodos}" update="@form" />
-		</p:panelGrid>
+			<h:commandButton value="Salvar" id="botaoSalvar"
+				action="#{cadastroUsuarioBean.salvar(cadastroUsuarioBean.usuario)}" update="@form" />
+			<h:commandButton value="listarTodos" id="botaoListarTodos"
+				action="#{cadastroUsuarioBean.listarTodos}" update="@form" />
+		</h:panelGrid>
 	</h:form>
-	<p:dataTable var="usu" value="#{cadastro.listaUsuarios}">
-		<p:column headerText="Nome">
-			<h:outputText value="#{usu.nome}" />
-		</p:column>
-		<p:column headerText="Email">
-			<h:outputText value="#{usu.email}" />
-		</p:column>
-	</p:dataTable>
 </h:body>
 </html>

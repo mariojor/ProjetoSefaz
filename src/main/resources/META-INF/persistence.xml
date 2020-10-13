@@ -12,9 +12,8 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:banco"/>
 			<property name="javax.persistence.jdbc.user" value="sa"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
-			<property name="javax.persistence.sql-load-script-source" value="../sql/dados.sql"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.hbm2ddl.auto" value="none\"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
 		</properties>

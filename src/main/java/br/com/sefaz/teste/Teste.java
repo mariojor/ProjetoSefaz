@@ -14,14 +14,14 @@ public class Teste {
 		usuario.setEmail("mariojorge.sdei@gmail.com");
 		usuario.setNome("Mario Jorge");
 		usuario.setSenha("123");
-		usuario.getTelefones().addAll(Arrays.asList("27363323", "93838393"));
+//		usuario.getTelefones().addAll(Arrays.asList("27363323", "93838393"));
 
 		Usuario usuario3 = new Usuario();
 
 		usuario3.setEmail("kleciai@gmail.com");
 		usuario3.setNome("klecia");
 		usuario3.setSenha("123");
-		usuario3.getTelefones().addAll(Arrays.asList("27363323", "93838393"));
+//		usuario3.getTelefones().addAll(Arrays.asList("27363323", "93838393"));
 
 		UsuarioDAO dao = new UsuarioDAO();
 		try {

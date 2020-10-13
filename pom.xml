@@ -3,26 +3,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.sefaz</groupId>
-	<artifactId>br.com.sefaz</artifactId>
+	<artifactId>sefaz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>br.com.sefaz</name>
 	<description>projeto para vaga na sefaz</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>6.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
-			<version>6.0</version>
+			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>2.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -38,44 +36,27 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.4.0</version>
 		</dependency>
-		<dependency>
-			<groupId> org.projectlombok </groupId>
-			<artifactId> lombok </artifactId>
-			<version> 1.18.12 </version>
-			<scope> provided </scope>
-		</dependency>
 
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>7.0</version>
+			<version>6.0</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.5.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-params</artifactId>
-			<version>5.5.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>3.1.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.11</version>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.9</version>
+			<scope>compile</scope>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.4.8.Final</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
